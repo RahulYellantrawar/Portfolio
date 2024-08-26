@@ -87,18 +87,24 @@ class _MyAppContainerState extends State<MyAppContainer> {
                         color: kBlack),
                   ),
                   SizedBox(height: size.width * 0.005),
-                  Container(
-                    width: double.infinity,
-                    padding: EdgeInsets.symmetric(
-                        vertical: widgetSize(size, 12, 8, 4)),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(4), color: kYellow),
-                    child: Center(
-                        child: Text('Download Now',
-                            style: TextStyle(
-                                color: kBlack,
-                                fontFamily: 'Function',
-                                fontWeight: FontWeight.bold))),
+                  InkWell(
+                    onTap: () {
+                      downloadApp(appDetails[widget.index].appUrl);
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      padding: EdgeInsets.symmetric(
+                          vertical: widgetSize(size, 12, 8, 4)),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(4),
+                          color: kYellow),
+                      child: Center(
+                          child: Text('Download Now',
+                              style: TextStyle(
+                                  color: kBlack,
+                                  fontFamily: 'Function',
+                                  fontWeight: FontWeight.bold))),
+                    ),
                   )
                 ],
               )

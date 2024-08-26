@@ -40,3 +40,9 @@ void launchGitHubProfile() async {
     await launchUrl(Uri.parse(profileUrl));
   }
 }
+
+void downloadApp(String appUrl) async {
+  if (await canLaunchUrl(Uri.parse(appUrl))) {
+    await launchUrl(Uri.parse(appUrl));
+  }
+}
